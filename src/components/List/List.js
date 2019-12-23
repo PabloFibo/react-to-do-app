@@ -7,11 +7,14 @@ import { settings } from '../../data/dataStore';
 import ReactHtmlParser from 'react-html-parser';
 import Creator from '../Creator/Creator.js';
 import Button from '../Button/Button.js';
+import Card from '../Card/Card.js';
 
 class List extends React.Component {
+
   state = {
     columns: this.props.columns || [],
   }
+
   static propTypes = {
     title: PropTypes.node.isRequired,
     image: PropTypes.string.isRequired,
@@ -38,6 +41,7 @@ class List extends React.Component {
       }
     ))
   }
+  
   render() {
     return (
       <section className={styles.component}>
