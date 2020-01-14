@@ -9,11 +9,17 @@ class SearchResults extends React.Component{
 
   static propTypes = {
     cards: PropTypes.array,
+    changeSearchString: PropTypes.func,
+    searchString: PropTypes.string,
+  }
+
+  componentDidMount() {
+    this.props.changeSearchString(this.props.searchString);
   }
 
   render(){
     const { cards } = this.props;
-  
+
     return (
       <Container>
         <section className={styles.component}>
